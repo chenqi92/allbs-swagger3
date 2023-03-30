@@ -1,0 +1,44 @@
+{
+  "properties": [
+    {
+      "name": "swagger.base-package",
+      "description": "该项目下的controller包路径，必须配置",
+      "defaultValue": ""
+    },
+    {
+      "name": "swagger.title",
+      "description": "标题",
+      "defaultValue": ""
+    },
+    {
+      "name": "swagger.description",
+      "description": "描述",
+      "defaultValue": ""
+    },
+    {
+      "name": "swagger.contact.name",
+      "description": "名称",
+      "defaultValue": ""
+    },
+    {
+      "name": "swagger.contact.url",
+      "description": "url",
+      "defaultValue": ""
+    },
+    {
+      "name": "swagger.contact.email",
+      "description": "联系邮箱",
+      "defaultValue": ""
+    },
+    {
+      "name": "swagger.version",
+      "description": "当前版本",
+      "defaultValue": "1.0"
+    },
+    {
+      "name": "swagger.license",
+      "description": "协议",
+      "defaultValue": ""
+    }
+  ]
+}
