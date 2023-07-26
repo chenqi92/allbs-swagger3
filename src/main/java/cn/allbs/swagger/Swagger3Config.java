@@ -5,7 +5,6 @@ import io.swagger.v3.oas.models.ExternalDocumentation;
 import io.swagger.v3.oas.models.OpenAPI;
 import io.swagger.v3.oas.models.info.Info;
 import io.swagger.v3.oas.models.security.SecurityRequirement;
-import lombok.RequiredArgsConstructor;
 import org.springdoc.core.GroupedOpenApi;
 import org.springframework.beans.factory.ObjectProvider;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
@@ -25,10 +24,13 @@ import java.util.Optional;
  */
 @Configuration
 @EnableConfigurationProperties({SwaggerProperties.class})
-@RequiredArgsConstructor
 public class Swagger3Config {
 
     private final SwaggerProperties swaggerProperties;
+
+    public Swagger3Config(SwaggerProperties swaggerProperties) {
+        this.swaggerProperties = swaggerProperties;
+    }
 
     @Bean
     @Profile({"dev", "test"})
@@ -55,6 +57,7 @@ public class Swagger3Config {
     }
 
     @Bean
+    @Profile({"dev", "test"})
     public GroupedOpenApi publicApi() {
         return GroupedOpenApi
                 .builder()
