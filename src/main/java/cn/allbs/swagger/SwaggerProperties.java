@@ -11,7 +11,6 @@ import java.util.Objects;
 
 /**
  * 类 SwaggerProperties
- * </p>
  *
  * @author ChenQi
  * @since 2022/8/9 13:38

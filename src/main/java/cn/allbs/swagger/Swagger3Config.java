@@ -17,7 +17,6 @@ import java.util.Optional;
 
 /**
  * 类 Swagger3Config
- * </p>
  *
  * @author ChenQi
  * @since 2022/8/9 13:36
@@ -28,10 +27,21 @@ public class Swagger3Config {
 
     private final SwaggerProperties swaggerProperties;
 
+    /**
+     * 配置参数
+     *
+     * @param swaggerProperties 配置参数
+     */
     public Swagger3Config(SwaggerProperties swaggerProperties) {
         this.swaggerProperties = swaggerProperties;
     }
 
+    /**
+     * 配置openApi
+     *
+     * @param buildProperties
+     * @return
+     */
     @Bean
     @Profile({"dev", "test"})
     public OpenAPI openApi(ObjectProvider<BuildProperties> buildProperties) {
